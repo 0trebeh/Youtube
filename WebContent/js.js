@@ -6,6 +6,8 @@ function Log(){
 	var user = document.getElementById("U").value;
 	var clave = document.getElementById("P").value;
 
+	user.setAttribute("user", user);
+
 	var resp = "";
 
 	form.append('usuario', user);

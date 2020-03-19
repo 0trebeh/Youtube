@@ -15,7 +15,13 @@ public class mainP {
 	public static void main(String[] args) throws SQLException, IOException, NoSuchAlgorithmException {
 		// TODO Auto-generated method stub
 		
-		System.out.println(Hash.getHash("hola"));
+		
+		Video.doget();
+		
+		
+		
+		
+		//System.out.println(Hash.getHash("hola"));
 		
 	/*	System.out.println(Auth.Login("123", "123"));
 		System.out.println(Auth.mail("123"));

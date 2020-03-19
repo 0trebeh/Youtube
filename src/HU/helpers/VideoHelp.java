@@ -1,7 +1,10 @@
 package HU.helpers;
 
+import java.io.IOException;
 import java.io.InputStream;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 public class VideoHelp {
@@ -21,9 +24,10 @@ public class VideoHelp {
 		return "500";
 	}
 	
-	public static void upload(InputStream in){
+	public static void upload(HttpServletResponse response, InputStream in) throws IOException{
 		int read = 0;
-		final Byte[] bytes = new Byte[1024];
+		final byte[] bytes = new byte[1024];
+		ServletOutputStream out = response.getOutputStream();
 		try {
 			while ((read = in.read(bytes)) != -1) {
 				out.write(bytes, 0, read);

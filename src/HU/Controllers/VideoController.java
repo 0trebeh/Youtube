@@ -44,7 +44,7 @@ public class VideoController {
 		}
 	}
 	
-	()static public void getDetalles(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
+	static public void getDetalles(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 		PrintWriter out = response.getWriter();
 		name=request.getParameter("usuario");
 		passwordhasheado = Hash.getHash(request.getParameter("pass"));

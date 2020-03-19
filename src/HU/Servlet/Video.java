@@ -54,13 +54,7 @@ public class Video extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
 		response.setContentType("aplicacion/json");
-		VideoController.setVideo(request, response, 
-				/*request.getPart("video"),
-				request.getParameter("title"),
-				request.getPart("thumnail"),
-				request.getParameter("descripcion"),
-				request.getSession(false)*/
-				);
+		VideoController.setVideo(request, response/*request.getPart("video"),request.getParameter("title"),request.getPart("thumnail"),request.getParameter("descripcion"),request.getSession(false)*/);
 		
 	}
 
